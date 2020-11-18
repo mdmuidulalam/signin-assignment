@@ -25,6 +25,11 @@ function Signin() {
     setMarginTopHeight((height-470)/2);
   });
 
+  const signinClick = () => {
+    setLoading(true);
+    setTimeout(() => setLoading(false), 3000);
+  }
+
   const menu = (
     <Menu>
       <Menu.Item>
@@ -44,11 +49,6 @@ function Signin() {
       </Menu.Item>
     </Menu>
   );
-
-  const signinClick = () => {
-    setLoading(true);
-    setTimeout(() => setLoading(false), 3000);
-  }
 
   return (
     <div id="signin" className={SigninStyles["signin"]}>
